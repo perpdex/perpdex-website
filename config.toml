@@ -1,4 +1,4 @@
-baseURL = 'https://perpdex.com/'
+baseURL = 'https://fascinating-daffodil-abb5d2.netlify.app/'
 languageCode = 'en-us'
 title = 'PerpDEX'
 theme = "ananke"
@@ -15,4 +15,4 @@ relativeURLs = true
   weight = -100
 
 [params]
-  favicon = "https://perpdex.com/images/perpdex_logo.png"
+  favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
