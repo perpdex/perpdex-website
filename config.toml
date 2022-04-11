@@ -1,4 +1,14 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://perpdex.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'PerpDEX'
 theme = "ananke"
+
+[menu]
+[[menu.main]]
+  name = 'Litepaper'
+  url = 'https://magnetic-holiday-dbf.notion.site/PerpDEX-Litepaper-acac35286f214b6db60dc64e58f42ca2'
+  weight = -110
+[[menu.main]]
+  name = 'App (rinkeby testnet)'
+  url = 'https://bafybeiabiecimmkhxi7m2ag3sgzz2iasdhee4vmpacvtq35wvjtr7s5yjm.ipfs.infura-ipfs.io/'
+  weight = -100
