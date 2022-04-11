@@ -13,3 +13,6 @@ relativeURLs = true
   name = 'App (rinkeby testnet)'
   url = 'https://bafybeiabiecimmkhxi7m2ag3sgzz2iasdhee4vmpacvtq35wvjtr7s5yjm.ipfs.infura-ipfs.io/'
   weight = -100
+
+[params]
+  favicon = "https://perpdex.com/images/perpdex_logo.png"
