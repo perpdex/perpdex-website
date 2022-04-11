@@ -11,7 +11,7 @@ relativeURLs = true
   weight = -110
 [[menu.main]]
   name = 'App (rinkeby testnet)'
-  url = 'https://bafybeiabiecimmkhxi7m2ag3sgzz2iasdhee4vmpacvtq35wvjtr7s5yjm.ipfs.infura-ipfs.io/'
+  url = 'https://bafybeiav5fv4kgzmathdrv7bkwngwy75u5hpyk3i2f3px4gt26kx2aat6u.ipfs.infura-ipfs.io/'
   weight = -100
 
 [params]
