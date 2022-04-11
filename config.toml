@@ -2,6 +2,7 @@ baseURL = 'https://perpdex.com/'
 languageCode = 'en-us'
 title = 'PerpDEX'
 theme = "ananke"
+relativeURLs = true
 
 [menu]
 [[menu.main]]
