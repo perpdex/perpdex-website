@@ -6,6 +6,10 @@ relativeURLs = true
 
 [menu]
 [[menu.main]]
+  name = 'Whitepaper'
+  url = 'https://perpdex.com/pdfs/whitepaper.pdf'
+  weight = -120
+[[menu.main]]
   name = 'Litepaper'
   url = 'https://magnetic-holiday-dbf.notion.site/PerpDEX-Litepaper-acac35286f214b6db60dc64e58f42ca2'
   weight = -110
