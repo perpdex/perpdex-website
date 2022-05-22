@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 <script>
   window.addEventListener("load", function () {
     let table = document.getElementById("coin_table");
@@ -10,7 +11,7 @@
       // Further guidelines on the attribution of ownership to CoinGecko
       // and usage of the CoinGecko Brand and can be found at https://www.coingecko.com/en/branding ("Brand Usage Guide").
       const END_POINT =
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum%2C%20solana&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum%2C%20solana&order=market_cap_desc&per_page=100&page=1&sparkline=true";
       fetch(END_POINT)
         .then((response) => response.json())
         .then((coins) => {
@@ -46,6 +47,47 @@
             tr.appendChild(coinPriceChangeTd);
 
             let statTd = document.createElement("td");
+            let sparklineCanvas = document.createElement("canvas");
+            sparklineCanvas.style.maxHeight = "50%";
+            let myChart = new Chart(sparklineCanvas, {
+              type: "line",
+              data: {
+                labels: coin.sparkline_in_7d.price.slice(0, 40),
+                datasets: [
+                  {
+                    data: coin.sparkline_in_7d.price.slice(0, 40),
+                    borderColor: Number(coin.price_change_percentage_24h) > 0 ? "#1BC240" : "#C21B39",
+                    tension: 0.5,
+                  },
+                ],
+              },
+              options: {
+                events: [],
+                elements: {
+                  point: {
+                    radius: 0,
+                  },
+                },
+                plugins: {
+                  legend: {
+                    display: false,
+                  },
+                },
+                scales: {
+                  y: {
+                    ticks: {
+                      display: false,
+                    },
+                  },
+                  x: {
+                    ticks: {
+                      display: false,
+                    },
+                  },
+                },
+              },
+            });
+            statTd.appendChild(sparklineCanvas);
             tr.appendChild(statTd);
 
             let tradeButtonTd = document.createElement("td");
