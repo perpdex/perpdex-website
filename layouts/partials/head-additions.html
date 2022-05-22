@@ -49,13 +49,14 @@
             let statTd = document.createElement("td");
             let sparklineCanvas = document.createElement("canvas");
             sparklineCanvas.style.maxHeight = "50%";
+            sparklineCanvas.style.maxWidth = "50%";
             let myChart = new Chart(sparklineCanvas, {
               type: "line",
               data: {
-                labels: coin.sparkline_in_7d.price.slice(0, 40),
+                labels: coin.sparkline_in_7d.price.slice(0, 20),
                 datasets: [
                   {
-                    data: coin.sparkline_in_7d.price.slice(0, 40),
+                    data: coin.sparkline_in_7d.price.slice(0, 20),
                     borderColor: Number(coin.price_change_percentage_24h) > 0 ? "#1BC240" : "#C21B39",
                     tension: 0.5,
                   },
