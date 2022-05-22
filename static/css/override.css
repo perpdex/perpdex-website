@@ -1,0 +1,270 @@
+body {
+  color: #ffffff;
+}
+
+.perp-dex-landing-page {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h1 {
+  font-family: "Lato";
+  font-style: normal;
+  background: linear-gradient(267.6deg, #ffa8bd 47.99%, #9699fa 83.13%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.f-subheadline-l {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "Lato";
+  font-style: normal;
+}
+
+.section-1 {
+  margin-bottom: 200px;
+}
+
+.section-title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  background: linear-gradient(267.6deg, #ffa8bd 47.99%, #9699fa 83.13%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub-section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.item {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  margin: 20px;
+}
+
+.section-2 {
+  margin-bottom: 200px;
+}
+
+.sub-section-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.section-item-2 {
+  width: 40%;
+}
+
+.section-item-title-2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 20px;
+  text-align: left;
+}
+
+.section-item-description {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 20px;
+  text-align: left;
+}
+
+.section-3-title {
+  text-align: center;
+}
+
+.section-3-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  box-sizing: border-box;
+  border: 1px dashed #c53a94;
+  filter: drop-shadow(0px 4px 10px rgba(197, 58, 148, 0.43));
+  border-radius: 15px;
+}
+
+.section-3-item {
+  width: 40%;
+}
+
+.section-3-title-item-1 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-3-title-item-2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.section-3-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 80px;
+}
+
+.section-3-item-title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 40px;
+}
+
+.section-3-item-value {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+.line {
+  border-left: 1px dashed #c53a94;
+}
+
+.section-4-title {
+  text-align: center;
+}
+
+.section-4-title-item-1 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-4-title-item-2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.section-4-contents {
+  margin: 60px;
+  margin-bottom: 0px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid #c53a94;
+}
+
+th {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: start;
+  border-bottom: 1px solid #c53a94;
+  padding: 20px;
+}
+
+td {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: start;
+  border-bottom: 1px solid #c53a94;
+  padding: 20px;
+  height: 100%;
+}
+
+.section-5 {
+  height: 200px;
+}
+
+.coin_image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.coin_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+p {
+  margin: 0%;
+}
+
+.site-title {
+  font-family: "Lato";
+  font-style: normal;
+  background: linear-gradient(267.6deg, #ffa8bd 47.99%, #9699fa 83.13%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient-radius {
+  display: inline-block;
+  padding: 7px 20px;
+  border: 2px solid #c53a94;
+  border-radius: 15px;
+  border-image: linear-gradient(to bottom, #c53a94 0%, #0965c0 100%);
+  border-image-slice: 1;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.sub-section-button {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
