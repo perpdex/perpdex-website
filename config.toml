@@ -32,7 +32,7 @@ relativeURLs = true
 [params]
   favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
   custom_css = ["css/override.css"]
-#  site_logo = "images/PerpLogo.png"
+  site_logo = "images/perpdex_logo_header.svg"
 
 [[params.ananke_socials]]
 name = "twitter"
