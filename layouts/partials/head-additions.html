@@ -28,7 +28,7 @@
             coinInfoTd.appendChild(img);
 
             let coinNameDiv = document.createElement("div");
-            coinNameDiv.innerText = coin.name + "(" + coin.symbol.toUpperCase() + ")";
+            coinNameDiv.innerText = coin.symbol.toUpperCase() + "/USDT";
 
             coinInfoTd.appendChild(coinNameDiv);
             tr.appendChild(coinInfoTd);
@@ -50,6 +50,7 @@
             let sparklineCanvas = document.createElement("canvas");
             sparklineCanvas.style.maxHeight = "50%";
             sparklineCanvas.style.maxWidth = "50%";
+            sparklineCanvas.style.backgroundColor = "#FFFFFF";
             let myChart = new Chart(sparklineCanvas, {
               type: "line",
               data: {
@@ -94,7 +95,7 @@
             let tradeButtonTd = document.createElement("td");
             let aTag = document.createElement("a");
             aTag.href = "https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/";
-            aTag.classList.add("btn-gradient-radius");
+            aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             tradeButtonTd.appendChild(aTag);
             tr.appendChild(tradeButtonTd);
