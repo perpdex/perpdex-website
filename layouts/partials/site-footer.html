@@ -1,8 +1,34 @@
-<footer id="footer" style="background-color:#170C32;" class="bottom-0 w-100 pa3" role="contentinfo">
+<footer id="footer" style="background-color: #000000" class="bottom-0 w-100 ph4 pt4 pb6" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-  </a>
-    <div>{{ partial "social-follow.html" . }}</div>
+    <div>
+      <a href="{{ .Site.Home.RelPermalink }}" class="f4 fw4 pv2 ph3 hover-white no-underline white-90 dib site-title">
+        {{ with .Site.Params.site_logo }}
+        <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+        {{ else }} {{ .Site.Title }} {{ end }}
+      </a>
+      <br />
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}">
+        &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+        Reserved {{ end }}
+      </a>
+    </div>
+    <div class="flex justify-between">
+      <div class="mh4 mv2">
+        <p class="footer-content-title mb4">Docs</p>
+        <p class="mb3">Whitepaper</p>
+        <p>User Manual</p>
+      </div>
+      <div class="mh4 mv2">
+        <p class="footer-content-title mb4">App</p>
+        <p class="mb3">Rinkeby Testnet</p>
+        <p>Mainnet</p>
+      </div>
+      <div class="mh4 mv2">
+        <p class="footer-content-title mb4">Social</p>
+        <p class="mb3">Twitter</p>
+        <p class="mb3">Discord</p>
+        <p>Medium</p>
+      </div>
+    </div>
   </div>
 </footer>
