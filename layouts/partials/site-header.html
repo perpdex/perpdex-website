@@ -21,8 +21,31 @@
   <header>
     <!-- <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | default "bg-black" }}"> -->
       <div class="pb3-m pb6-l">
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <div class="menu-content">
+            <ul>
+                <!-- <li>
+                    <a href="#">About Us</a>
+                </li> -->
+                <li>
+                    <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">WhitePaper</a>
+                </li>
+                <li>
+                    <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">App (rinkeby testnet)</a>
+                </li>
+                <li>
+                  <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">Blog</a>
+                </li>
+                <!-- <li>
+                  <a href="#footer">Contact Us</a>
+                </li> -->
+            </ul>
+        </div>
+      </div>
       {{ partial "site-navigation.html" . }}
-      <div class="tc-l pv3 ph3 ph4-ns">
+      <div class="header-content tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 mb0 lh-title">
           Perpetual Futures DEX<br/>
           Active Trading, Passive Mining
@@ -32,8 +55,8 @@
             {{ . }}
           </h2>
         {{ end }}
-        <button class="btn-gradient-radius"><a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/">Trade</a></button>
-        <a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" class="btn-radius">Add liquidity</a>
+        <button class="btn-gradient-radius"><a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" target="_blank" title="link" rel="noopener">Trade</a></button>
+        <a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" class="btn-radius" target="_blank" title="link" rel="noopener">Add liquidity</a>
       </div>
     </div>
   </header>

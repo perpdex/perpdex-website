@@ -32,6 +32,10 @@ h1 {
   text-fill-color: transparent;
 }
 
+.header-content {
+  text-align: center;
+}
+
 .f-subheadline-l {
   font-weight: 700;
   font-size: 50px;
@@ -45,12 +49,6 @@ h1 {
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
-}
-
-.sub-section-1 {
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-  margin: 20px;
 }
 
 .item {
@@ -79,12 +77,6 @@ h1 {
   text-align: center;
 
   color: #444444;
-}
-
-.section-2 {
-  margin-bottom: 200px;
-  background-color: rgba(150, 153, 250, 0.22);
-  padding: 40px;
 }
 
 .sub-section-2 {
@@ -148,12 +140,6 @@ h1 {
   text-align: left;
 
   margin-top: 20px;
-}
-
-.section-3 {
-  padding: 40px;
-  padding-top: 80px;
-  background: rgba(249, 0, 119, 0.08);
 }
 
 .line {
@@ -359,4 +345,155 @@ footer > p {
 
 a {
   text-decoration: none;
+}
+
+/* hamburger-menu */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: transparent;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #f90077;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background: linear-gradient(to bottom, #ffffff, #ffeeff 60%, #ffffff);
+  transition: all 0.5s; /*アニメーション設定*/
+}
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #d8d8d8;
+  list-style: none;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #d8d8d8;
+  border-right: solid 2px #d8d8d8;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  left: 0; /*メニューを画面内へ*/
+}
+
+@media screen and (max-width: 768px) {
+  .sub-section-1 {
+    display: grid;
+    grid-auto-columns: auto;
+    margin: 20px;
+  }
+  .section-4 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .section-2 {
+    padding: 10px;
+    margin-bottom: 100px;
+    background-color: rgba(150, 153, 250, 0.22);
+  }
+  .section-3 {
+    padding: 10px;
+    background: rgba(249, 0, 119, 0.08);
+  }
+  .social-nav {
+    display: none;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .footer-content-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-2 {
+    padding: 40px;
+    margin-bottom: 200px;
+    background-color: rgba(150, 153, 250, 0.22);
+  }
+  .section-3 {
+    padding: 40px;
+    padding-top: 80px;
+    background: rgba(249, 0, 119, 0.08);
+  }
+  .sub-section-1 {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    margin: 20px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
