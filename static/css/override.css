@@ -16,6 +16,9 @@ footer {
   font-family: "Lato";
   font-style: normal;
   color: #ffffff;
+
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .perp-dex-landing-page {
@@ -32,7 +35,7 @@ footer {
 }
 
 .header-title {
-  background: linear-gradient(180deg, #9699fa -31.93%, #f90077 103.21%);
+  background: linear-gradient(180deg, #9699fa 0%, #f90077 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,11 +52,13 @@ footer {
 }
 
 .footer-title {
-  background: linear-gradient(180deg, #9699fa -31.93%, #f90077 103.21%);
+  background: linear-gradient(180deg, #9699fa 0%, #f90077 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  font-size: 35px;
 
   margin-left: 10px;
 }
@@ -336,7 +341,8 @@ p {
   color: rgba(0, 0, 0, 0.7);
   transition: 0.4s;
 
-  font-weight: normal;
+  font-family: "Lato";
+  font-style: normal;
 }
 
 button.btn-gradient-radius {
@@ -376,6 +382,8 @@ button > a {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+
+  text-decoration: underline;
 }
 
 footer > p {
@@ -393,6 +401,7 @@ footer > p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* hamburger-menu */
