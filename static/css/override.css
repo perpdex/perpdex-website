@@ -3,6 +3,9 @@ header {
   font-style: normal;
   color: rgba(0, 0, 0, 0.7);
   background: linear-gradient(to bottom, #ffffff 55%, #ffeeff 70%, #ffffff);
+
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 body {
