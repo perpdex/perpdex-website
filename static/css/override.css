@@ -2,7 +2,7 @@ header {
   font-family: "Lato";
   font-style: normal;
   color: rgba(0, 0, 0, 0.7);
-  background: linear-gradient(to bottom, #ffffff, #ffeeff 60%, #ffffff);
+  background: linear-gradient(to bottom, #ffffff 55%, #ffeeff 70%, #ffffff);
 }
 
 body {
@@ -24,12 +24,60 @@ footer {
   font-size: 50px;
 }
 
-h1 {
-  background: linear-gradient(to bottom, #9699fa 47.99%, #f90077 83.13%);
+.header-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.header-title {
+  background: linear-gradient(180deg, #9699fa -31.93%, #f90077 103.21%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  margin-left: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.footer-title {
+  background: linear-gradient(180deg, #9699fa -31.93%, #f90077 103.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  margin-left: 10px;
+}
+
+h1 {
+  background: linear-gradient(180deg, #9699fa 0%, #f90077 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+
+  text-align: center;
+
+  color: #444444;
+
+  width: 90%;
 }
 
 .header-content {

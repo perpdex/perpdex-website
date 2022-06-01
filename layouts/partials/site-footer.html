@@ -2,8 +2,11 @@
   <div class="footer-section">
     <div>
       <a href="{{ .Site.Home.RelPermalink }}" class="f4 fw4 pv2 ph3 hover-white no-underline white-90 dib site-title">
-        {{ with .Site.Params.site_logo }}
-        <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+        {{ with .Site.Params.site_logo_footer }}
+        <div class="footer-logo">
+          <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+          <div class="footer-title">PerpDEX</div>
+        </div>
         {{ else }} {{ .Site.Title }} {{ end }}
       </a>
       <br />

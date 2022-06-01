@@ -5,9 +5,9 @@ theme = "ananke"
 relativeURLs = true
 
 [menu]
-[[menu.main]]
-  name = 'About Us'
-  weight = -120
+# [[menu.main]]
+#   name = 'About Us'
+#   weight = -120
 [[menu.main]]
   name = 'WhitePaper'
   url = 'https://perpdex.com/pdfs/whitepaper.pdf'
@@ -33,3 +33,4 @@ relativeURLs = true
   favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
   custom_css = ["css/override.css"]
   site_logo = "images/perpdex_logo_header.svg"
+  site_logo_footer = "images/perpdex_logo_footer.svg"
