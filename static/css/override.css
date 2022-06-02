@@ -550,6 +550,8 @@ a {
     font-weight: 700;
     font-size: 9px;
     line-height: 11px;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   .section-item-6-title-1 {
@@ -622,6 +624,18 @@ a {
     font-size: 12px;
 
     margin-left: 10px;
+  }
+
+  .section-item-2-container-item-first {
+    margin-bottom: 0px;
+  }
+  .section-item-2-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .section-item-6-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 
