@@ -294,7 +294,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
 }
 
 .section-item-6 {
@@ -303,8 +302,8 @@ p {
 
 .section-item-6-title-1 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 32px;
+  line-height: 40px;
 
   color: #000000;
 
@@ -313,8 +312,8 @@ p {
 
 .section-item-6-title-2 {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 22px;
+  line-height: 42px;
 
   color: #444444;
 
@@ -331,8 +330,8 @@ p {
 
 .section-item-6-container-item-1 {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 28px;
 
   margin-left: 10px;
 
