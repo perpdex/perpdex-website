@@ -231,7 +231,7 @@ h2 {
 
 .section-4-contents {
   margin: 60px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 
@@ -242,11 +242,11 @@ table {
 
 th {
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 25px;
   text-align: start;
   border-bottom: 1px solid #c53a94;
-  padding: 20px;
+  padding: 15px;
 }
 
 .chnage-time {
@@ -258,9 +258,10 @@ th {
 
 td {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 25px;
   text-align: start;
-  padding: 20px;
+  padding: 15px;
   height: 100%;
 }
 
