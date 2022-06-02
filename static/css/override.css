@@ -4,8 +4,8 @@ header {
   color: rgba(0, 0, 0, 0.7);
   background: linear-gradient(to bottom, #ffffff 55%, #ffeeff 70%, #ffffff);
 
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 body {
@@ -99,6 +99,9 @@ h2 {
 
 .section-1 {
   margin-bottom: 200px;
+
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section-title {
@@ -204,6 +207,9 @@ h2 {
 
 .section-4 {
   padding-bottom: 8rem;
+
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section-4-title {
@@ -279,6 +285,11 @@ p {
   margin: 0%;
 }
 
+.section-6 {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .sub-section-6 {
   display: flex;
   flex-wrap: wrap;
@@ -322,6 +333,8 @@ p {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
+
+  margin-left: 10px;
 
   color: #444444;
   text-align: left;
@@ -529,13 +542,19 @@ a {
 
 @media (min-width: 768px) {
   .section-2 {
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-bottom: 200px;
     background-color: rgba(150, 153, 250, 0.22);
   }
   .section-3 {
-    padding: 40px;
     padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+
     background: rgba(249, 0, 119, 0.08);
   }
   .sub-section-1 {
