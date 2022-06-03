@@ -646,6 +646,10 @@ button:hover,
     margin-top: 0px;
     margin-bottom: 0px;
   }
+
+  td > .btn-radius {
+    padding: 5px 20px;
+  }
 }
 
 @media (min-width: 768px) {
