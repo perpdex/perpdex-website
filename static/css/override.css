@@ -319,6 +319,11 @@ li > a:hover {
   text-decoration: underline;
 }
 
+button:hover,
+.btn-radius:hover {
+  transform: translateY(-0.1875em);
+}
+
 /* hamburger-menu */
 .menu-btn {
   position: fixed;
