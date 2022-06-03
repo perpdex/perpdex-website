@@ -1,6 +1,6 @@
 <nav class="pv4" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib site-title">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
       {{ with .Site.Params.site_logo }}
       <div class="header-logo">
         <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
@@ -16,7 +16,7 @@
         <ul class="pl0 mr3">
           {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline black-70" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
+            <a class="black-70" href="{{ .URL }}" target="_blank" rel="noopener noreferrer" title="{{ i18n "pageTitle" . }}">
               {{ .Name }}
             </a>
           </li>
@@ -24,6 +24,8 @@
         </ul>
       {{ end }}
     </div>
-    <button class="btn-nav btn-gradient-radius"><a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/">Trade</a></button>
+    <button class="btn-nav btn-gradient-radius">
+      <a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" target="_blank" rel="noopener noreferrer">Trade</a>
+    </button>
   </div>
 </nav>

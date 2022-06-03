@@ -315,6 +315,10 @@ a {
   color: inherit;
 }
 
+li > a:hover {
+  text-decoration: underline;
+}
+
 /* hamburger-menu */
 .menu-btn {
   position: fixed;
