@@ -287,6 +287,7 @@ button > a {
   background-color: #f90077;
   border-radius: 15px;
   color: #ffffff;
+  transition: 0.4s;
 
   font-weight: normal;
 }
@@ -414,6 +415,19 @@ button:hover,
 }
 
 @media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav-phone {
+    background-color: #ffffff;
+    height: 75px;
+  }
+
+  .header-logo {
+    position: fixed;
+  }
+
   .header-content > h1 {
     font-weight: 700;
     font-size: 25px;
@@ -653,6 +667,10 @@ button:hover,
 }
 
 @media (min-width: 768px) {
+  .header-nav-phone {
+    display: none;
+  }
+
   p {
     margin: 0%;
   }
