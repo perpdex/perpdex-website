@@ -107,7 +107,7 @@ h2 {
   display: inline-block;
   padding: 50px 30px;
   border: 1px solid #d8d8d8;
-  border-radius: 20px;
+  border-radius: 10px;
 
   font-weight: 700;
   font-size: 22px;
@@ -496,6 +496,13 @@ button:hover,
   .sub-section-1 {
     display: grid;
     grid-auto-columns: auto;
+  }
+
+  .item {
+    padding: 30px 20px;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-left: 60px;
   }
 
   .item-title {
