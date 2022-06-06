@@ -122,10 +122,20 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
+  padding: 16px;
 }
 
 .section-item-2 {
   width: 40%;
+}
+
+.section-item-2-contents {
+  flex: 60;
+}
+
+.section-item-2-image {
+  flex: 40;
 }
 
 .section-item-2-container {
