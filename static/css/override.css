@@ -31,7 +31,7 @@ footer {
   font-size: 50px;
 }
 
-.header-logo {
+.header-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -434,8 +434,12 @@ button:hover,
     height: 75px;
   }
 
-  .header-logo {
+  .header-logos {
     position: fixed;
+  }
+
+  .header-logo {
+    width: 20%;
   }
 
   .header-content > h1 {
