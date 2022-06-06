@@ -526,6 +526,10 @@ button:hover,
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
+  .section-4-contents {
+    margin: 0px;
+  }
+
   .section-2 {
     padding: 10px;
     margin-bottom: 100px;
