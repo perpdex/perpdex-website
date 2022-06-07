@@ -425,7 +425,7 @@ button:hover,
   left: 0; /*メニューを画面内へ*/
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
@@ -755,7 +755,44 @@ button:hover,
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav-phone {
+    margin: 0px;
+  }
+
+  .header-logos {
+    top: 43px;
+    left: calc((100% - 150px) / 2);
+    position: fixed;
+  }
+
+  .header-logo {
+    width: 43px;
+    height: 43px;
+  }
+
+  .header-title {
+    height: 31px;
+  }
+
+  .header-nav-phone {
+    background-color: #ffffff;
+    height: 131px;
+  }
+
+  .menu-btn {
+    width: 44px;
+    height: 44px;
+    left: calc(50% - 44px / 2 - 354px);
+    top: 43px;
+  }
+}
+
+@media (min-width: 992px) {
   .header-nav-phone {
     display: none;
   }
