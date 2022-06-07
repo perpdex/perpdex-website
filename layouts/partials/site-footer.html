@@ -10,13 +10,13 @@
         {{ else }} {{ .Site.Title }} {{ end }}
       </a>
       <br />
-      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}">
+      <a class="copy-right f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}">
         &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
         Reserved {{ end }}
       </a>
     </div>
     <div class="footer-item">
-      <div class="mh4 mv2">
+      <div class="footer-content mh4 mv2">
         <p class="footer-content-title mb4">Docs</p>
         <div class="mb3">
           <a
@@ -31,7 +31,7 @@
         </div>
         <p class="footer-p">User Manual</p>
       </div>
-      <div class="mh4 mv2">
+      <div class="footer-content mh4 mv2">
         <p class="footer-content-title mb4">App</p>
         <div class="mb3">
           <a
@@ -46,7 +46,7 @@
         </div>
         <p class="footer-p">Mainnet</p>
       </div>
-      <div class="mh4 mv2">
+      <div class="footer-content mh4 mv2">
         <p class="footer-content-title mb4">Social</p>
         <a
           href="https://twitter.com/perpdex"
