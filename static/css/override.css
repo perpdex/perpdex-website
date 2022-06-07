@@ -879,6 +879,46 @@ button:hover,
     padding: 9px 29px;
   }
 
+  .section-1 > .section-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .sub-section-1 {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+  }
+
+  .item {
+    padding: 20px 20px;
+
+    border-radius: 15px;
+  }
+
+  .item > img {
+    width: 30px;
+    height: 30px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .item-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #444444;
+  }
+
   .btn-gradient-radius {
     border-radius: 10px;
   }
