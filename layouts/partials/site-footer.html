@@ -74,5 +74,11 @@
         </a>
       </div>
     </div>
+    <div class="copy-right-section-smart-phone">
+      <a class="copy-right-smart-phone hover-white no-underline" href="{{ .Site.BaseURL }}">
+        &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+        Reserved {{ end }}
+      </a>
+    </div>
   </div>
 </footer>
