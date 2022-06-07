@@ -808,6 +808,84 @@ button:hover,
     font-size: 20px;
     line-height: 24px;
   }
+
+  p {
+    margin: 0px;
+  }
+
+  .section-4 {
+    margin-top: 80px;
+  }
+
+  .section-4-contents {
+    margin: 0px;
+  }
+
+  .section-4-title > .section-4-title-item-1 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+
+    margin-bottom: 8px;
+  }
+
+  .section-4-title > .section-4-title-item-2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-bottom: 40px;
+  }
+
+  th {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: start;
+    border-bottom: 1px solid #c53a94;
+    padding: 15px;
+  }
+
+  .chnage-time {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6b6a6a;
+  }
+
+  td {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: start;
+    padding: 15px;
+    height: 100%;
+  }
+
+  .coin_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    height: 70px;
+  }
+
+  .coin_image {
+    width: 30px;
+    height: 30px;
+  }
+
+  td > .btn-radius {
+    padding: 9px 29px;
+  }
+
+  .btn-gradient-radius {
+    border-radius: 10px;
+  }
+
+  .btn-radius {
+    border-radius: 10px;
+  }
 }
 
 @media (min-width: 992px) {
