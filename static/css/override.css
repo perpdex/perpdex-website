@@ -345,7 +345,7 @@ button:hover,
 .menu-btn {
   position: fixed;
   top: 10px;
-  right: 10px;
+  left: 10px;
   display: flex;
   height: 60px;
   width: 60px;
@@ -441,6 +441,8 @@ button:hover,
   }
 
   .header-logos {
+    top: 24px;
+    left: calc((100% - 150px) / 2);
     position: fixed;
   }
 

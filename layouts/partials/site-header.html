@@ -23,6 +23,29 @@
       {{ partial "site-navigation.html" . }}
       <nav class="header-nav-phone mt2 ml2" role="navigation">
         <div class="flex-l justify-between items-center center">
+          <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+              <ul>
+                 <!-- <li>
+                     <a href="#">About Us</a>
+                 </li> -->
+                 <li>
+                     <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">WhitePaper</a>
+                 </li>
+                 <li>
+                     <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">App (rinkeby testnet)</a>
+                 </li>
+                 <li>
+                   <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">Blog</a>
+                 </li>
+                 <!-- <li>
+                   <a href="#footer">Contact Us</a>
+                 </li> -->
+              </ul>
+            </div>
+          </div>
           <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
             {{ with .Site.Params.site_logo }}
             <div class="header-logos">
@@ -33,30 +56,6 @@
             </div>
             {{ end }}
           </a>
-          <div class="pb3-m pb6-l">
-            <div class="hamburger-menu">
-              <input type="checkbox" id="menu-btn-check">
-              <label for="menu-btn-check" class="menu-btn"><span></span></label>
-              <div class="menu-content">
-                <ul>
-                    <!-- <li>
-                        <a href="#">About Us</a>
-                    </li> -->
-                    <li>
-                        <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">WhitePaper</a>
-                    </li>
-                    <li>
-                        <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">App (rinkeby testnet)</a>
-                    </li>
-                    <li>
-                      <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">Blog</a>
-                    </li>
-                    <!-- <li>
-                      <a href="#footer">Contact Us</a>
-                    </li> -->
-                </ul>
-            </div>
-          </div>
         </div>
       </nav>
       <div class="header-content tc-l pv3 ph3 ph4-ns">
