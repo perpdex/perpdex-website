@@ -376,12 +376,10 @@ button:hover,
   background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
 }
 #menu-btn-check:checked ~ .menu-btn span::before {
-  bottom: 0;
-  transform: rotate(45deg);
+  display: none;
 }
 #menu-btn-check:checked ~ .menu-btn span::after {
-  top: 0;
-  transform: rotate(-45deg);
+  display: none;
 }
 
 #menu-btn-check {
@@ -393,41 +391,45 @@ button:hover,
   height: 100%;
   position: fixed;
   top: 0;
-  left: 100%; /*leftの値を変更してメニューを画面外へ*/
+  right: 100%; /*rightの値を変更してメニューを画面外へ*/
   z-index: 80;
-  background: linear-gradient(to bottom, #ffffff, #ffeeff 60%, #ffffff);
+  background: #ffffff;
   transition: all 0.5s; /*アニメーション設定*/
 }
-.menu-content ul {
-  padding: 70px 10px 0;
-}
-.menu-content ul li {
-  border-bottom: solid 1px #d8d8d8;
-  list-style: none;
-}
-.menu-content ul li a {
-  display: block;
+.modal-header {
+  padding: 0px;
   width: 100%;
-  font-size: 15px;
-  box-sizing: border-box;
+  background: linear-gradient(90deg, #f90077 0%, #9699fa 100%);
+}
+.menu-content ul {
+  padding: 0 10px 0;
+}
+.menu-content .modal-ul li {
+  border-bottom: solid 1px;
+  border-image: linear-gradient(to right, #f90077, #9699fa) 1;
+}
+.menu-content .modal-ul li a {
+  align-items: center;
+  display: flex;
+  width: 100%;
   text-decoration: none;
   padding: 9px 15px 10px 0;
   position: relative;
 }
-.menu-content ul li a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-top: solid 2px #d8d8d8;
-  border-right: solid 2px #d8d8d8;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 11px;
-  top: 16px;
+
+.menu-content .modal-social-ul li a {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+
+  color: #f90077;
 }
 
 #menu-btn-check:checked ~ .menu-content {
-  left: 0; /*メニューを画面内へ*/
+  right: 0; /*メニューを画面内へ*/
 }
 
 @media screen and (max-width: 767px) {
@@ -769,6 +771,75 @@ button:hover,
 
   .header-nav-phone {
     margin: 0px;
+  }
+
+  .menu-content {
+    z-index: 99;
+    width: 400px;
+  }
+
+  .modal-header {
+    padding: 0px;
+    width: 400px;
+    height: 98px;
+  }
+
+  .modal-logo {
+    position: absolute;
+    width: 27.7px;
+    height: 27.7px;
+    left: calc(50% - 27.7px / 2 - 59.15px);
+    top: 41px;
+  }
+
+  .modal-header-text {
+    position: absolute;
+    width: 88.03px;
+    height: 19.91px;
+    left: calc(50% - 88.03px / 2 + 5.98px);
+    top: 44.55px;
+
+    color: #ffffff;
+  }
+
+  .modal-ul > li > a {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #f90077;
+  }
+
+  .modal-ul > li > a > img {
+    margin-left: 44px;
+    margin-right: 10px;
+  }
+
+  .modal-social-ul > li > a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .modal-social-ul > li > a > img {
+    margin-left: 44px;
+    margin-right: 10px;
+  }
+
+  #menu-btn-check:checked ~ .menu-background {
+    z-index: 98;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #9699fa;
+    opacity: 0.2;
+  }
+
+  #menu-btn-check:checked ~ .menu-content {
+    right: 420px; /*メニューを画面内へ*/
   }
 
   .header-logos {

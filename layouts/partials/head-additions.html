@@ -1,5 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 <script>
+  window.addEventListener("click", (event) => {
+    if (event.target.closest("#menu-background") !== null) {
+      document.getElementById("menu-btn-check").checked = false;
+    }
+  });
   window.addEventListener("load", function () {
     let table = document.getElementById("coin_table");
     try {

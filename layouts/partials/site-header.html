@@ -23,27 +23,43 @@
       {{ partial "site-navigation.html" . }}
       <nav class="header-nav-phone mt2 ml2" role="navigation">
         <div class="flex-l justify-between items-center center">
-          <div class="hamburger-menu">
+          <div id="hamburger-menu" class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div id="menu-background" class="menu-background"></div>
             <div class="menu-content">
-              <ul>
-                 <!-- <li>
-                     <a href="#">About Us</a>
-                 </li> -->
+              <div class="modal-header">
+                <img class="modal-logo" src="images/hamburger-menu/Vector.svg" alt="">
+                <div class="modal-header-text">PerpDEX</div>
+              </div>
+              <ul class="modal-ul">
                  <li>
-                     <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">WhitePaper</a>
+                    <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">
+                      <img src="images/hamburger-menu/darhboard_alt.svg" alt="">App (mainnet)</a>
                  </li>
                  <li>
-                     <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">App (rinkeby testnet)</a>
+                     <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">
+                      <img src="images/hamburger-menu/Order.svg" alt="">WhitePaper</a>
                  </li>
                  <li>
-                   <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">Blog</a>
+                   <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/Book_open.svg" alt="">Documentation</a>
                  </li>
-                 <!-- <li>
-                   <a href="#footer">Contact Us</a>
-                 </li> -->
               </ul>
+              <ul class="modal-social-ul">
+                <li>
+                   <a href="https://twitter.com/perpdex" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/twitter.svg" alt="">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/UybkXsSD" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/discord.svg" alt="">Discord</a>
+                </li>
+                <li>
+                  <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/medium.svg" alt="">Medium</a>
+                </li>
+             </ul>
             </div>
           </div>
           <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
