@@ -720,12 +720,26 @@ button:hover,
     color: rgba(255, 255, 255, 0.6);
   }
 
+  .footer-section {
+    display: none;
+  }
+
+  .footer-section-mobile {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .footer-item {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+
+    text-align: left;
+  }
+
   .footer-content-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-
-    text-decoration: underline;
 
     margin-top: 30px;
     margin-bottom: 10px;
@@ -1203,6 +1217,10 @@ button:hover,
     margin-right: 25px;
   }
 
+  .footer-section-mobile {
+    display: none;
+  }
+
   .copy-right {
     font-weight: 400;
     font-size: 16px;
@@ -1420,6 +1438,10 @@ button:hover,
     font-size: 35px;
 
     margin-left: 10px;
+  }
+
+  .footer-section-mobile {
+    display: none;
   }
 
   .copy-right-smart-phone {

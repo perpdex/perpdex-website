@@ -74,11 +74,89 @@
         </a>
       </div>
     </div>
-    <div class="copy-right-section-smart-phone">
-      <a class="copy-right-smart-phone hover-white no-underline" href="{{ .Site.BaseURL }}">
-        &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
-        Reserved {{ end }}
+  </div>
+
+  <div class="footer-section-mobile">
+    <div>
+      <a href="{{ .Site.Home.RelPermalink }}" class="f4 fw4 pv2 mh4 hover-white no-underline white-90 dib site-title">
+        {{ with .Site.Params.site_logo_footer }}
+        <div class="footer-logo">
+          <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+          <div class="footer-title">PerpDEX</div>
+        </div>
+        {{ else }} {{ .Site.Title }} {{ end }}
       </a>
     </div>
+    <div class="footer-item">
+      <div class="footer-content mh4 mv2">
+        <p class="footer-content-title mb4">Docs</p>
+        <div>
+          <a
+            class="footer-a"
+            href="https://perpdex.com/pdfs/whitepaper.pdf"
+            target="_blank"
+            title="link"
+            rel="noopener"
+          >
+            Whitepaper
+          </a>
+        </div>
+        <p class="footer-p">User Manual</p>
+      </div>
+      <div class="footer-content mh4 mv2">
+        <p class="footer-content-title mb4">App</p>
+        <div>
+          <a
+            class="footer-a"
+            href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/"
+            target="_blank"
+            title="link"
+            rel="noopener"
+          >
+            Rinkeby Testnet
+          </a>
+        </div>
+        <p class="footer-p">Mainnet</p>
+      </div>
+      <div class="footer-content mh4 mv2">
+        <p class="footer-content-title mb4">Social</p>
+        <a
+          href="https://twitter.com/perpdex"
+          target="_blank"
+          class="footer-social footer-a mb2"
+          title="link"
+          rel="noopener"
+        >
+          <img src="images/twitter-mobile.svg" alt="" class="mr2" />
+          <div>Twitter</div>
+        </a>
+        <a
+          href="https://discord.gg/UybkXsSD"
+          target="_blank"
+          class="footer-social footer-a mb2"
+          title="link"
+          rel="noopener"
+        >
+          <img src="images/discord-mobile.svg" alt="" class="mr2" />
+          <div>Discord</div>
+        </a>
+        <a
+          href="https://medium.com/perpdex"
+          target="_blank"
+          class="footer-social footer-a mb2"
+          title="link"
+          rel="noopener"
+        >
+          <img src="images/medium-mobile.svg" alt="" class="mr2" />
+          <div>Medium</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right-section-smart-phone">
+    <a class="copy-right-smart-phone hover-white no-underline" href="{{ .Site.BaseURL }}">
+      &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+      Reserved {{ end }}
+    </a>
   </div>
 </footer>
