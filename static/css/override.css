@@ -1015,6 +1015,10 @@ button:hover,
     padding: 9px 29px;
   }
 
+  #coin_info_mobile {
+    display: none;
+  }
+
   .section-1 > .section-title {
     font-weight: 700;
     font-size: 30px;
@@ -1403,6 +1407,10 @@ button:hover,
 
   .section-4 {
     padding-top: 8rem;
+  }
+
+  #coin_info_mobile {
+    display: none;
   }
 
   .section-item-6-title-1 {
