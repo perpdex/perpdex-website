@@ -7,6 +7,7 @@
   });
   window.addEventListener("load", function () {
     let table = document.getElementById("coin_table");
+    let coinInfoDiv = document.getElementById("coin_info_mobile");
     try {
       // https://www.coingecko.com/en/api_terms
       // 4.3 You undertake that in your usage of the CoinGecko API,
@@ -102,6 +103,50 @@
             tr.appendChild(tradeButtonTd);
 
             table.appendChild(tr);
+          }
+
+          // mobile
+          for (let i = 0; i < coins.length; i++) {
+            let coin = coins[i];
+            let coinInfoItemDiv = document.createElement("div");
+            coinInfoItemDiv.classList.add("coin-info-mobile-item");
+
+            let imgNameDiv = document.createElement("div");
+            imgNameDiv.classList.add("coin-image-name");
+
+            let img = document.createElement("img");
+            img.src = coin.image;
+            img.classList.add("coin-image");
+            imgNameDiv.appendChild(img);
+
+            let coinNameDiv = document.createElement("div");
+            coinNameDiv.innerText = coin.symbol.toUpperCase() + "/USDT";
+            coinNameDiv.classList.add("coin-name");
+            imgNameDiv.appendChild(coinNameDiv);
+            coinInfoItemDiv.appendChild(imgNameDiv);
+
+            let coinPriceDiv = document.createElement("div");
+            coinPriceDiv.innerText = "$" + Number(coin.current_price).toLocaleString();
+            coinPriceDiv.classList.add("coin-price");
+            coinInfoItemDiv.appendChild(coinPriceDiv);
+
+            let coinPriceChangeDiv = document.createElement("div");
+            coinPriceChangeDiv.innerText = coin.price_change_percentage_24h + "%";
+            if (Number(coin.price_change_percentage_24h) > 0) {
+              coinPriceChangeDiv.style.color = "#1BC240";
+            } else {
+              coinPriceChangeDiv.style.color = "#C21B39";
+            }
+            coinPriceChangeDiv.classList.add("coin-price-change");
+            coinInfoItemDiv.appendChild(coinPriceChangeDiv);
+
+            let aTag = document.createElement("a");
+            aTag.href = "https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/";
+            aTag.classList.add("btn-radius");
+            aTag.innerText = "Trade";
+            coinInfoItemDiv.appendChild(aTag);
+
+            coinInfoDiv.appendChild(coinInfoItemDiv);
           }
         });
     } catch (error) {
