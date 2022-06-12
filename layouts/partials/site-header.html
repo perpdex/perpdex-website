@@ -60,6 +60,10 @@
                     <img src="images/hamburger-menu/medium.svg" alt="">Medium</a>
                 </li>
              </ul>
+             <a class="modal-copy-right" href="{{ .Site.BaseURL }}">
+              &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+              Reserved {{ end }}
+            </a>
             </div>
           </div>
           <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
