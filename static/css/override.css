@@ -208,8 +208,8 @@ table {
 .sub-section-6 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: start;
 }
 
 .section-item-6 {
@@ -252,6 +252,10 @@ table {
 
   color: #444444;
   text-align: left;
+}
+
+.section-item-6-second {
+  margin-top: 60px;
 }
 
 .site-title {
@@ -984,14 +988,16 @@ button:hover,
 
   .item-title {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 15px;
   }
 
   .item-content {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
 
     color: #444444;
@@ -1009,6 +1015,11 @@ button:hover,
 
   .sub-section-2 {
     padding: 0px;
+  }
+
+  .section-item-2-container {
+    margin-top: 24px;
+    margin-bottom: 38px;
   }
 
   .section-item-2-title-1 {
@@ -1033,8 +1044,8 @@ button:hover,
   }
   .section-item-2-container-item-1 {
     font-weight: 700;
-    font-size: 19px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 24px;
 
     color: #000000;
     text-align: left;
@@ -1045,8 +1056,10 @@ button:hover,
 
   .section-item-2-container-item-2 {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 18px;
+    line-height: 22px;
+
+    margin-top: 14px;
 
     color: #000000;
     text-align: left;
@@ -1061,7 +1074,7 @@ button:hover,
   }
 
   .sub-section-button > a {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     margin-top: 5px;
@@ -1087,6 +1100,10 @@ button:hover,
   .maker-container-icon {
     width: 30px;
     height: 30px;
+  }
+
+  .section-item-6-first {
+    flex: 66;
   }
 
   .section-item-6-title-1 {
