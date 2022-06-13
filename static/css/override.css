@@ -443,6 +443,10 @@ button:hover,
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    padding: 0;
+  }
+
   .menu-content {
     z-index: 99;
     width: 300px;
@@ -537,6 +541,8 @@ button:hover,
   .header-nav-phone {
     background-color: #ffffff;
     height: 75px;
+    position: fixed;
+    width: 100%;
   }
 
   .header-logos {
@@ -912,12 +918,19 @@ button:hover,
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
+  header {
+    padding: 0;
+  }
+
   .header-nav {
     display: none;
   }
 
   .header-nav-phone {
-    margin: 0px;
+    background-color: #ffffff;
+    height: 131px;
+    position: fixed;
+    width: 100%;
   }
 
   .menu-content {
@@ -1014,11 +1027,6 @@ button:hover,
 
   .header-title {
     height: 31px;
-  }
-
-  .header-nav-phone {
-    background-color: #ffffff;
-    height: 131px;
   }
 
   .menu-btn {

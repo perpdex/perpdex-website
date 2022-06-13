@@ -20,79 +20,78 @@
 {{ else }}
   <header>
     <!-- <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | default "bg-black" }}"> -->
-      {{ partial "site-navigation.html" . }}
-      <nav class="header-nav-phone mt2 ml2" role="navigation">
-        <div class="flex-l justify-between items-center center">
-          <div id="hamburger-menu" class="hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <div id="menu-background" class="menu-background"></div>
-            <div class="menu-content">
-              <div class="modal-header">
-                <img class="modal-logo" src="images/hamburger-menu/Vector.svg" alt="">
-                <div class="modal-header-text">PerpDEX</div>
-              </div>
-              <ul class="modal-ul">
-                 <li>
-                    <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">
-                      <img src="images/hamburger-menu/darhboard_alt.svg" alt="">App (mainnet)</a>
-                 </li>
-                 <li>
-                     <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">
-                      <img src="images/hamburger-menu/Order.svg" alt="">WhitePaper</a>
-                 </li>
-                 <li>
-                   <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">
-                     <img src="images/hamburger-menu/Book_open.svg" alt="">Documentation</a>
-                 </li>
-              </ul>
-              <ul class="modal-social-ul">
+     {{ partial "site-navigation.html" . }}
+     <nav class="header-nav-phone" role="navigation">
+       <div class="flex-l justify-between items-center center">
+         <div id="hamburger-menu" class="hamburger-menu">
+           <input type="checkbox" id="menu-btn-check">
+           <label for="menu-btn-check" class="menu-btn"><span></span></label>
+           <div id="menu-background" class="menu-background"></div>
+           <div class="menu-content">
+             <div class="modal-header">
+               <img class="modal-logo" src="images/hamburger-menu/Vector.svg" alt="">
+               <div class="modal-header-text">PerpDEX</div>
+             </div>
+             <ul class="modal-ul">
                 <li>
-                   <a href="https://twitter.com/perpdex" target="_blank" title="link" rel="noopener">
-                     <img src="images/hamburger-menu/twitter.svg" alt="">Twitter</a>
+                   <a href="https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/darhboard_alt.svg" alt="">App (mainnet)</a>
                 </li>
                 <li>
-                    <a href="https://discord.gg/UybkXsSD" target="_blank" title="link" rel="noopener">
-                     <img src="images/hamburger-menu/discord.svg" alt="">Discord</a>
+                    <a href="https://perpdex.com/pdfs/whitepaper.pdf" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/Order.svg" alt="">WhitePaper</a>
                 </li>
                 <li>
                   <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">
-                    <img src="images/hamburger-menu/medium.svg" alt="">Medium</a>
+                    <img src="images/hamburger-menu/Book_open.svg" alt="">Documentation</a>
                 </li>
              </ul>
-             <a class="modal-copy-right" href="{{ .Site.BaseURL }}">
-              &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
-              Reserved {{ end }}
-            </a>
-            </div>
-          </div>
-          <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
-            {{ with .Site.Params.site_logo }}
-            <div class="header-logos">
-              <img src="{{ relURL . }}" class="w100 mw5-ns header-logo" alt="{{ $.Site.Title }}" />
-              <div class="header-title">
-                PerpDEX
-              </div>
-            </div>
-            {{ end }}
-          </a>
-        </div>
-      </nav>
-      <div class="header-content tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 lh-title">
-          Perpetual Futures DEX<br/>
-          Active Trading, Passive Mining
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l bleck-70 center lh-copy mt3 mb4">
-            {{ . }}
-          </h2>
-        {{ end }}
-        <div class="header-button">
-          <button class="btn-gradient-radius header-trade-button"><a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" target="_blank" title="link" rel="noopener">Trade</a></button>
-          <a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" class="btn-radius" target="_blank" title="link" rel="noopener">Add liquidity</a>
-        </div>
-      </div>
-    </div>
+             <ul class="modal-social-ul">
+               <li>
+                  <a href="https://twitter.com/perpdex" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/twitter.svg" alt="">Twitter</a>
+               </li>
+               <li>
+                   <a href="https://discord.gg/UybkXsSD" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/discord.svg" alt="">Discord</a>
+               </li>
+               <li>
+                 <a href="https://medium.com/perpdex" target="_blank" title="link" rel="noopener">
+                   <img src="images/hamburger-menu/medium.svg" alt="">Medium</a>
+               </li>
+            </ul>
+            <a class="modal-copy-right" href="{{ .Site.BaseURL }}">
+             &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+             Reserved {{ end }}
+           </a>
+           </div>
+         </div>
+         <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
+           {{ with .Site.Params.site_logo }}
+           <div class="header-logos">
+             <img src="{{ relURL . }}" class="w100 mw5-ns header-logo" alt="{{ $.Site.Title }}" />
+             <div class="header-title">
+               PerpDEX
+             </div>
+           </div>
+           {{ end }}
+         </a>
+       </div>
+     </nav>
+     <div class="header-content tc-l pv3 ph3 ph4-ns">
+       <h1 class="f2 f-subheadline-l fw2 lh-title">
+         Perpetual Futures DEX<br/>
+         Active Trading, Passive Mining
+       </h1>
+       {{ with .Params.description }}
+         <h2 class="fw1 f5 f3-l bleck-70 center lh-copy mt3 mb4">
+           {{ . }}
+         </h2>
+       {{ end }}
+       <div class="header-button">
+         <button class="btn-gradient-radius header-trade-button"><a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" target="_blank" title="link" rel="noopener">Trade</a></button>
+         <a href="https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/" class="btn-radius" target="_blank" title="link" rel="noopener">Add liquidity</a>
+       </div>
+     </div>
   </header>
 {{ end }}
