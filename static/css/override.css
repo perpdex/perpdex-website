@@ -83,6 +83,8 @@ h2 {
 
 .header-content {
   text-align: center;
+  height: calc(100vh - 35vh);
+  padding-top: calc(100vh - 85vh);
 }
 
 .f-subheadline-l {
