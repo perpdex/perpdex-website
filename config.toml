@@ -5,18 +5,34 @@ theme = "ananke"
 relativeURLs = true
 
 [menu]
-[[menu.main]]
-  name = 'Whitepaper'
-  url = 'https://perpdex.com/pdfs/whitepaper.pdf'
-  weight = -120
 # [[menu.main]]
-#   name = 'Litepaper'
-#   url = 'https://magnetic-holiday-dbf.notion.site/PerpDEX-Litepaper-acac35286f214b6db60dc64e58f42ca2'
-#   weight = -110
+#   name = 'About Us'
+#   weight = -120
+[[menu.main]]
+  name = 'WhitePaper'
+  url = 'https://perpdex.com/pdfs/whitepaper.pdf'
+  weight = -110
 [[menu.main]]
   name = 'App (rinkeby testnet)'
   url = 'https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/'
-  weight = -100
+  weight = -90
+[[menu.main]]
+  name = 'Docs'
+  url = 'https://docs.perpdex.com/'
+  weight = -80
+[[menu.main]]
+  name = 'Contact Us'
+  url = '#footer'
+  weight = -70
 
 [params]
   favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
+  custom_css = ["css/override.css"]
+  site_logo = "images/perpdex_logo_header.svg"
+  site_logo_footer = "images/perpdex_logo_footer.svg"
+  discord_url = "https://discord.gg/6gXs4qq9hy"
+  twitter_url = "https://twitter.com/perpdex"
+  medium_url = "https://medium.com/perpdex"
+  docs_url = "https://docs.perpdex.com/"
+  whitepaper_url = "https://perpdex.com/pdfs/whitepaper.pdf"
+  testnet_url = "https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/"

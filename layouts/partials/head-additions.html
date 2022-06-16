@@ -1,0 +1,156 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script>
+  window.addEventListener("click", (event) => {
+    if (event.target.closest("#menu-background") !== null) {
+      document.getElementById("menu-btn-check").checked = false;
+    }
+  });
+  window.addEventListener("load", function () {
+    let table = document.getElementById("coin_table");
+    let coinInfoDiv = document.getElementById("coin_info_mobile");
+    try {
+      // https://www.coingecko.com/en/api_terms
+      // 4.3 You undertake that in your usage of the CoinGecko API,
+      // you shall duly attribute ownership of the CoinGecko API to CoinGecko
+      // by displaying prominently the message "Powered by CoinGecko"
+      // in a legible font (an example of a legible font type being "Arial") no smaller than font size 10.
+      // Further guidelines on the attribution of ownership to CoinGecko
+      // and usage of the CoinGecko Brand and can be found at https://www.coingecko.com/en/branding ("Brand Usage Guide").
+      const END_POINT =
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum%2C%20solana&order=market_cap_desc&per_page=100&page=1&sparkline=true";
+      fetch(END_POINT)
+        .then((response) => response.json())
+        .then((coins) => {
+          for (let i = 0; i < coins.length; i++) {
+            let coin = coins[i];
+            let tr = document.createElement("tr");
+
+            let coinInfoTd = document.createElement("td");
+            coinInfoTd.classList.add("coin_info");
+
+            let img = document.createElement("img");
+            img.src = coin.image;
+            img.classList.add("coin_image");
+            coinInfoTd.appendChild(img);
+
+            let coinNameDiv = document.createElement("div");
+            coinNameDiv.innerText = coin.symbol.toUpperCase() + "/USDT";
+
+            coinInfoTd.appendChild(coinNameDiv);
+            tr.appendChild(coinInfoTd);
+
+            let coinPriceTd = document.createElement("td");
+            coinPriceTd.innerText = "$" + Number(coin.current_price).toLocaleString();
+            tr.appendChild(coinPriceTd);
+
+            let coinPriceChangeTd = document.createElement("td");
+            coinPriceChangeTd.innerText = coin.price_change_percentage_24h + "%";
+            if (Number(coin.price_change_percentage_24h) > 0) {
+              coinPriceChangeTd.style.color = "#1BC240";
+            } else {
+              coinPriceChangeTd.style.color = "#C21B39";
+            }
+            tr.appendChild(coinPriceChangeTd);
+
+            let statTd = document.createElement("td");
+            let sparklineCanvas = document.createElement("canvas");
+            sparklineCanvas.style.maxHeight = "60%";
+            sparklineCanvas.style.maxWidth = "50%";
+            sparklineCanvas.style.backgroundColor = "#FFFFFF";
+            let myChart = new Chart(sparklineCanvas, {
+              type: "line",
+              data: {
+                labels: coin.sparkline_in_7d.price.slice(0, 20),
+                datasets: [
+                  {
+                    data: coin.sparkline_in_7d.price.slice(0, 20),
+                    borderColor: Number(coin.price_change_percentage_24h) > 0 ? "#1BC240" : "#C21B39",
+                    tension: 0.5,
+                  },
+                ],
+              },
+              options: {
+                events: [],
+                elements: {
+                  point: {
+                    radius: 0,
+                  },
+                },
+                plugins: {
+                  legend: {
+                    display: false,
+                  },
+                },
+                scales: {
+                  y: {
+                    display: false,
+                  },
+                  x: {
+                    display: false,
+                  },
+                },
+              },
+            });
+            statTd.appendChild(sparklineCanvas);
+            tr.appendChild(statTd);
+
+            let tradeButtonTd = document.createElement("td");
+            let aTag = document.createElement("a");
+            aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.classList.add("btn-radius");
+            aTag.innerText = "Trade";
+            tradeButtonTd.appendChild(aTag);
+            tr.appendChild(tradeButtonTd);
+
+            table.appendChild(tr);
+          }
+
+          // mobile
+          for (let i = 0; i < coins.length; i++) {
+            let coin = coins[i];
+            let coinInfoItemDiv = document.createElement("div");
+            coinInfoItemDiv.classList.add("coin-info-mobile-item");
+
+            let imgNameDiv = document.createElement("div");
+            imgNameDiv.classList.add("coin-image-name");
+
+            let img = document.createElement("img");
+            img.src = coin.image;
+            img.classList.add("coin-image");
+            imgNameDiv.appendChild(img);
+
+            let coinNameDiv = document.createElement("div");
+            coinNameDiv.innerText = coin.symbol.toUpperCase() + "/USDT";
+            coinNameDiv.classList.add("coin-name");
+            imgNameDiv.appendChild(coinNameDiv);
+            coinInfoItemDiv.appendChild(imgNameDiv);
+
+            let coinPriceDiv = document.createElement("div");
+            coinPriceDiv.innerText = "$" + Number(coin.current_price).toLocaleString();
+            coinPriceDiv.classList.add("coin-price");
+            coinInfoItemDiv.appendChild(coinPriceDiv);
+
+            let coinPriceChangeDiv = document.createElement("div");
+            coinPriceChangeDiv.innerText = coin.price_change_percentage_24h + "%";
+            if (Number(coin.price_change_percentage_24h) > 0) {
+              coinPriceChangeDiv.style.color = "#1BC240";
+            } else {
+              coinPriceChangeDiv.style.color = "#C21B39";
+            }
+            coinPriceChangeDiv.classList.add("coin-price-change");
+            coinInfoItemDiv.appendChild(coinPriceChangeDiv);
+
+            let aTag = document.createElement("a");
+            aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.classList.add("btn-radius");
+            aTag.innerText = "Trade";
+            coinInfoItemDiv.appendChild(aTag);
+
+            coinInfoDiv.appendChild(coinInfoItemDiv);
+          }
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  });
+</script>

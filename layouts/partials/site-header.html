@@ -1,0 +1,97 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{ if $featured_image }}
+  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+  {{ $featured_image := (trim $featured_image "/") | absURL }}
+  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
+    <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
+      {{ partial "site-navigation.html" .}}
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          {{ .Title | default .Site.Title }}
+        </h1>
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+{{ else }}
+  <header>
+    <!-- <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | default "bg-black" }}"> -->
+     {{ partial "site-navigation.html" . }}
+     <nav class="header-nav-phone" role="navigation">
+       <div class="flex-l justify-between items-center center">
+         <div id="hamburger-menu" class="hamburger-menu">
+           <input type="checkbox" id="menu-btn-check">
+           <label for="menu-btn-check" class="menu-btn"><span></span></label>
+           <div id="menu-background" class="menu-background"></div>
+           <div class="menu-content">
+             <div class="modal-header">
+               <img class="modal-logo" src="images/hamburger-menu/Vector.svg" alt="">
+               <div class="modal-header-text">PerpDEX</div>
+             </div>
+             <ul class="modal-ul">
+                <li>
+                   <a href="{{ .Site.Params.testnet_url }}" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/darhboard_alt.svg" alt="">App (mainnet)</a>
+                </li>
+                <li>
+                    <a href="{{ .Site.Params.whitepaper_url }}" target="_blank" title="link" rel="noopener">
+                     <img src="images/hamburger-menu/Order.svg" alt="">WhitePaper</a>
+                </li>
+                <li>
+                  <a href="{{ .Site.Params.medium_url }}" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/Book_open.svg" alt="">Documentation</a>
+                </li>
+             </ul>
+             <ul class="modal-social-ul">
+               <li>
+                  <a href="{{ .Site.Params.twitter_url }}" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/twitter.svg" alt="">Twitter</a>
+               </li>
+               <li>
+                   <a href="{{ .Site.Params.discord_url }}" target="_blank" title="link" rel="noopener">
+                    <img src="images/hamburger-menu/discord.svg" alt="">Discord</a>
+               </li>
+               <li>
+                 <a href="{{ .Site.Params.medium_url }}" target="_blank" title="link" rel="noopener">
+                   <img src="images/hamburger-menu/medium.svg" alt="">Medium</a>
+               </li>
+            </ul>
+            <a class="modal-copy-right" href="{{ .Site.BaseURL }}">
+             &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}}. All Rights
+             Reserved {{ end }}
+           </a>
+           </div>
+         </div>
+         <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 white-90 dib site-title">
+           {{ with .Site.Params.site_logo }}
+           <div class="header-logos">
+             <img src="{{ relURL . }}" class="w100 mw5-ns header-logo" alt="{{ $.Site.Title }}" />
+             <div class="header-title">
+               PerpDEX
+             </div>
+           </div>
+           {{ end }}
+         </a>
+       </div>
+     </nav>
+     <div class="header-content tc-l pv3 ph3 ph4-ns">
+       <h1 class="f2 f-subheadline-l fw2 lh-title">
+         Perpetual Futures DEX<br/>
+         Active Trading, Passive Mining
+       </h1>
+       {{ with .Params.description }}
+         <h2 class="fw1 f5 f3-l bleck-70 center lh-copy mt3 mb4">
+           {{ . }}
+         </h2>
+       {{ end }}
+       <div class="header-button">
+         <button class="btn-gradient-radius header-trade-button"><a href="{{ .Site.Params.testnet_url }}" target="_blank" title="link" rel="noopener">Trade</a></button>
+         <a href="{{ .Site.Params.testnet_url }}" class="btn-radius" target="_blank" title="link" rel="noopener">Add liquidity</a>
+       </div>
+     </div>
+  </header>
+{{ end }}
