@@ -324,7 +324,7 @@ footer > p {
   line-height: 24px;
 }
 
-.footer-social {
+.footer-network {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -427,7 +427,7 @@ button:hover,
   position: relative;
 }
 
-.menu-content .modal-social-ul li a {
+.menu-content .modal-network-ul li a {
   align-items: center;
   display: flex;
   width: 100%;
@@ -492,13 +492,13 @@ button:hover,
     height: 22px;
   }
 
-  .modal-social-ul > li > a {
+  .modal-network-ul > li > a {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
   }
 
-  .modal-social-ul > li > a > img {
+  .modal-network-ul > li > a > img {
     margin-left: 44px;
     margin-right: 10px;
 
@@ -830,7 +830,7 @@ button:hover,
     height: 15px;
   }
 
-  .social-nav {
+  .network-nav {
     display: none;
   }
   .btn-nav {
@@ -975,13 +975,13 @@ button:hover,
     margin-right: 10px;
   }
 
-  .modal-social-ul > li > a {
+  .modal-network-ul > li > a {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
   }
 
-  .modal-social-ul > li > a > img {
+  .modal-network-ul > li > a > img {
     margin-left: 44px;
     margin-right: 10px;
   }
