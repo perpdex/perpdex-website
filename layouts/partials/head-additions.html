@@ -96,7 +96,7 @@
 
             let tradeButtonTd = document.createElement("td");
             let aTag = document.createElement("a");
-            aTag.href = "https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/";
+            aTag.href = "{{ .Site.Params.testnet_url }}";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             tradeButtonTd.appendChild(aTag);
@@ -141,7 +141,7 @@
             coinInfoItemDiv.appendChild(coinPriceChangeDiv);
 
             let aTag = document.createElement("a");
-            aTag.href = "https://bafybeieuvihn2qcxhj6s3r6rkvlb7xbvlwi7k4eyxgmtae2d3t5v3l77xy.ipfs.infura-ipfs.io/";
+            aTag.href = "{{ .Site.Params.testnet_url }}";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             coinInfoItemDiv.appendChild(aTag);
