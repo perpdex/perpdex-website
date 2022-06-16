@@ -9,7 +9,7 @@ relativeURLs = true
 #   name = 'About Us'
 #   weight = -120
 [[menu.main]]
-  name = 'WhitePaper'
+  name = 'Whitepaper'
   url = 'https://perpdex.com/pdfs/whitepaper.pdf'
   weight = -110
 [[menu.main]]
