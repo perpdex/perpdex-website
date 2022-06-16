@@ -20,10 +20,10 @@ relativeURLs = true
   name = 'Docs'
   url = 'https://docs.perpdex.com/'
   weight = -80
-[[menu.main]]
-  name = 'Contact Us'
-  url = '#footer'
-  weight = -70
+# [[menu.main]]
+#   name = 'Contact Us'
+#   url = '#footer'
+#   weight = -70
 
 [params]
   favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
