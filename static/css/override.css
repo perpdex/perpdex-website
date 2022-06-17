@@ -519,7 +519,7 @@ button:hover,
   }
 
   #menu-btn-check:checked ~ .menu-content {
-    right: 100px; /*メニューを画面内へ*/
+    right: 100px; /*Bring the menu into the screen*/
   }
 
   .modal-copy-right {
@@ -999,7 +999,7 @@ button:hover,
   }
 
   #menu-btn-check:checked ~ .menu-content {
-    right: 420px; /*メニューを画面内へ*/
+    right: 420px; /*Bring the menu into the screen*/
   }
 
   .modal-copy-right {
