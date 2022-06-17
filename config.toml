@@ -27,7 +27,7 @@ relativeURLs = true
 
 [params]
   favicon = "images/favicon/favicon.png"
-  custom_css = ["css/override.css"]
+  custom_css = []
   site_logo = "images/perpdex_logo_header.svg"
   site_logo_footer = "images/perpdex_logo_footer.svg"
   discord_url = "https://discord.gg/6gXs4qq9hy"

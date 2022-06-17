@@ -1,0 +1,14 @@
+{{ with partialCached "func/style/GetMainCSS" "style/GetMainCSS" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" >
+{{ end }}
+
+{{ range site.Params.custom_css }}
+  {{ with partialCached "func/style/GetResource" . . }}{{ else }}
+    <link rel="stylesheet" href="{{ relURL (.) }}">
+  {{ end }}
+{{ end }}
+
+{{ $options := dict "use" "autoprefixer" }}
+{{ $css := resources.Get "css/override.css" }}
+{{ $styles := $css | resources.ToCSS | resources.PostCSS $options }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
