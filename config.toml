@@ -26,7 +26,7 @@ relativeURLs = true
 #   weight = -70
 
 [params]
-  favicon = "https://fascinating-daffodil-abb5d2.netlify.app/images/perpdex_logo.png"
+  favicon = "images/favicon/favicon.png"
   custom_css = ["css/override.css"]
   site_logo = "images/perpdex_logo_header.svg"
   site_logo_footer = "images/perpdex_logo_footer.svg"
