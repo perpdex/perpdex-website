@@ -383,7 +383,7 @@ button:hover,
 }
 
 #menu-btn-check:checked ~ .menu-btn span {
-  background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
+  background-color: rgba(255, 255, 255, 0); /*Make the middle line transparent when the menu is open.*/
 }
 #menu-btn-check:checked ~ .menu-btn span::before {
   display: none;
@@ -401,10 +401,10 @@ button:hover,
   height: 100%;
   position: fixed;
   top: 0;
-  right: 100%; /*rightの値を変更してメニューを画面外へ*/
+  right: 100%; /*Change the value of right to take the menu off the screen.*/
   z-index: 80;
   background: #ffffff;
-  transition: all 0.5s; /*アニメーション設定*/
+  transition: all 0.5s; /*animation config*/
 }
 .modal-header {
   padding: 0px;
@@ -439,7 +439,7 @@ button:hover,
 }
 
 #menu-btn-check:checked ~ .menu-content {
-  right: 0; /*メニューを画面内へ*/
+  right: 0; /*Bring the menu into the screen*/
 }
 
 @media screen and (max-width: 767px) {
