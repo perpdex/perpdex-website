@@ -97,6 +97,8 @@
             let tradeButtonTd = document.createElement("td");
             let aTag = document.createElement("a");
             aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.target = "_blank";
+            aTag.rel = "noopener";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             tradeButtonTd.appendChild(aTag);
@@ -142,6 +144,8 @@
 
             let aTag = document.createElement("a");
             aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.target = "_blank";
+            aTag.rel = "noopener";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             coinInfoItemDiv.appendChild(aTag);
