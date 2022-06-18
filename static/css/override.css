@@ -413,6 +413,7 @@ button:hover,
 }
 .menu-content ul {
   padding: 0 10px 0;
+  list-style-type: none;
 }
 .menu-content .modal-ul li {
   border-bottom: solid 1px;
@@ -439,7 +440,7 @@ button:hover,
 }
 
 #menu-btn-check:checked ~ .menu-content {
-  right: 0; /*Bring the menu into the screen*/
+  left: 0; /*Bring the menu into the screen*/
 }
 
 @media screen and (max-width: 767px) {
@@ -516,10 +517,6 @@ button:hover,
 
     background: #9699fa;
     opacity: 0.2;
-  }
-
-  #menu-btn-check:checked ~ .menu-content {
-    right: 100px; /*Bring the menu into the screen*/
   }
 
   .modal-copy-right {
@@ -997,11 +994,7 @@ button:hover,
     background: #9699fa;
     opacity: 0.2;
   }
-
-  #menu-btn-check:checked ~ .menu-content {
-    right: 420px; /*Bring the menu into the screen*/
-  }
-
+  
   .modal-copy-right {
     position: absolute;
     left: 88px;

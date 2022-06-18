@@ -1,9 +1,12 @@
 <script defer src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 <script>
-  window.addEventListener("click", (event) => {
-    if (event.target.closest("#menu-background") !== null) {
-      document.getElementById("menu-btn-check").checked = false;
-    }
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const menuBackground = document.getElementById("menu-background");
+    menuBackground.addEventListener("click", (event) => {
+      if (event.target.closest("#menu-background") !== null) {
+        document.getElementById("menu-btn-check").checked = false;
+      }
+    });
   });
   window.addEventListener("load", function () {
     let table = document.getElementById("coin_table");
@@ -97,6 +100,8 @@
             let tradeButtonTd = document.createElement("td");
             let aTag = document.createElement("a");
             aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.target = "_blank";
+            aTag.rel = "noopener";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             tradeButtonTd.appendChild(aTag);
@@ -142,6 +147,8 @@
 
             let aTag = document.createElement("a");
             aTag.href = "{{ .Site.Params.testnet_url }}";
+            aTag.target = "_blank";
+            aTag.rel = "noopener";
             aTag.classList.add("btn-radius");
             aTag.innerText = "Trade";
             coinInfoItemDiv.appendChild(aTag);
