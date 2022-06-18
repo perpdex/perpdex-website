@@ -443,10 +443,6 @@ button:hover,
   left: 0; /*Bring the menu into the screen*/
 }
 
-.menu-background {
-  cursor: pointer;
-}
-
 @media screen and (max-width: 767px) {
   header {
     padding: 0;
