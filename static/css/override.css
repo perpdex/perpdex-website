@@ -401,10 +401,8 @@ button:hover,
   height: 100%;
   position: fixed;
   top: 0;
-  right: 100%; /*Change the value of right to take the menu off the screen.*/
   z-index: 80;
   background: #ffffff;
-  transition: all 0.5s; /*animation config*/
 }
 .modal-header {
   padding: 0px;
@@ -451,6 +449,8 @@ button:hover,
   .menu-content {
     z-index: 99;
     width: 300px;
+    left: -300px; /*Change the value of left to take the menu off the screen.*/
+    transition: all 0.5s; /*animation config*/
   }
 
   .modal-header {
@@ -933,6 +933,8 @@ button:hover,
   .menu-content {
     z-index: 99;
     width: 400px;
+    left: -400px; /*Change the value of left to take the menu off the screen.*/
+    transition: all 0.5s; /*animation config*/
   }
 
   .modal-header {
@@ -994,7 +996,7 @@ button:hover,
     background: #9699fa;
     opacity: 0.2;
   }
-  
+
   .modal-copy-right {
     position: absolute;
     left: 88px;
