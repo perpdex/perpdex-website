@@ -1328,7 +1328,7 @@ button:hover,
   .footer-item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: left;
     flex: 50;
   }
 
