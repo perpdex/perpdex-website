@@ -13,8 +13,8 @@ relativeURLs = true
   url = 'https://perpdex.com/pdfs/whitepaper.pdf'
   weight = -110
 [[menu.main]]
-  name = 'App (rinkeby testnet)'
-  url = 'https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/'
+  name = 'App (shibuya testnet)'
+  url = 'https://ipfs.infura.io/ipfs/QmeFAwP46ZX4RY2hmkGjnyzSB8MNUcMwAmFbmEQpNAWoec/'
   weight = -90
 [[menu.main]]
   name = 'Docs'
@@ -35,4 +35,4 @@ relativeURLs = true
   medium_url = "https://medium.com/perpdex"
   docs_url = "https://docs.perpdex.com/"
   whitepaper_url = "https://perpdex.com/pdfs/whitepaper.pdf"
-  testnet_url = "https://ipfs.infura.io/ipfs/QmYLySzkqAQ9P4Kedu3TWBHxdFwdopD1YdBKimo2mSJBnm/"
+  testnet_url = "https://ipfs.infura.io/ipfs/QmeFAwP46ZX4RY2hmkGjnyzSB8MNUcMwAmFbmEQpNAWoec/"
