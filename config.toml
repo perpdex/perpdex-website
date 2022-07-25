@@ -14,7 +14,7 @@ relativeURLs = true
   weight = -110
 [[menu.main]]
   name = 'App (shibuya testnet)'
-  url = 'https://ipfs.infura.io/ipfs/QmSHza9cyLepUYzbC2fsidCfPw5KqUKezpWzQoEUDsKjCi/'
+  url = 'https://ipfs.infura.io/ipfs/QmWPVntk9PbHq5YMpCF5gf4WKJobDZj5j8nMpoXRaRALn4/'
   weight = -90
 [[menu.main]]
   name = 'Docs'
@@ -35,4 +35,4 @@ relativeURLs = true
   medium_url = "https://medium.com/perpdex"
   docs_url = "https://docs.perpdex.com/"
   whitepaper_url = "https://perpdex.com/pdfs/whitepaper.pdf"
-  testnet_url = "https://ipfs.infura.io/ipfs/QmSHza9cyLepUYzbC2fsidCfPw5KqUKezpWzQoEUDsKjCi/"
+  testnet_url = "https://ipfs.infura.io/ipfs/QmWPVntk9PbHq5YMpCF5gf4WKJobDZj5j8nMpoXRaRALn4/"
